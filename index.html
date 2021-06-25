@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<script type="module">
+import { add, style } from "https://js.sabae.cc/stdom.js";
+
+onload = async () => {
+  const imglist = [
+    //"CfJlogo_ver2_horizontal_RGB.jpg",
+    "CfJlogo_ver2_square_RGB.jpg",
+    "code4fukui_logo.png",
+  ];
+  let len = 9;
+  const show = () => {
+    document.body.innerHTML = "";
+    style({
+      body: { "overflow": "hidden", "margin": 0 },
+      img: { width: `calc(100vw / ${len})`, "object-fit": "contain" },
+    })
+    let idx = 0;
+    for (let i = 0; i < len * len; i++) {
+      for (let j = 0; j < imglist.length; j++) {
+        const n = j + (len % 2 == 0 ? 1 - Math.floor(idx / len) % 2 : 0);
+        const s = imglist[n % imglist.length];
+        const img = new Image();
+        img.src = s;
+        document.body.appendChild(img);
+        idx++;
+      }
+    }
+  };
+  document.body.onkeydown = (e) => {
+    if (e.key == "ArrowDown") {
+      if (len > 1) {
+        len--;
+        show();
+      }
+    } else if (e.key == "ArrowUp") {
+      if (len < 50) {
+        len++;
+        show();
+      }
+    }
+  };
+  show();
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  };
+  document.body.onclick = toggleFullScreen;
+};
+</script>
