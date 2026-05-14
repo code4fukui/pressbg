@@ -8,7 +8,7 @@ A dynamic background generator that creates a real-time, adjustable tiling grid 
 
 ## Demo
 
-**Live demo:** [**https://code4fukui.github.io/pressbg/**](https://code4fukui.github.io/pressbg/)
+**Live demo:** [**https://github.com/code4fukui/pressbg](https://code4fukui.github.io/pressbg/)
 
 ## Features
 

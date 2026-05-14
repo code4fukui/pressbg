@@ -6,7 +6,7 @@
 
 ## デモ
 
-**ライブデモ:** [**https://code4fukui.github.io/pressbg/**](https://code4fukui.github.io/pressbg/)
+**ライブデモ:** [**https://github.com/code4fukui/pressbg](https://code4fukui.github.io/pressbg/)
 
 ## 機能
 
